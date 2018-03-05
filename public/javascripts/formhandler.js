@@ -16,6 +16,29 @@
 
       strData[key] = value;
     }
+
+
+    //fetch
+
+    let url = "api/";
+
+    fetch(url, {
+      method:'post',
+      headers :{
+        'Accept': 'application/json, text-plain, */*',
+        'Content-type': 'application/json'
+      },
+
+      body : JSON.stringify(strData)
+    })
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
   }
   //events listeners
   submitButton.addEventListener('click', addRecord);
