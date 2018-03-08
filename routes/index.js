@@ -9,20 +9,20 @@ var toRender = (config.kidsmode) ? 'main_kids' : 'home';
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('home', {
-    title: 'Kids Page',
-    message : "handlebars is awesome",
-    mainpage : true,
-    cms : false,
-    kidsmode : config.kidsmode
+    title: 'Dashboard',
+    message: "handlebars is awesome",
+    mainpage: true,
+    cms: false,
+    kidsmode: config.kidsmode
   });
 });
 
-router.get('/cms', (req , res) => {
+router.get('/cms', (req, res) => {
   console.log('init the cms route');
   res.render('cmsform', {
-  cms : true,
-  mainpage : false
-});
+    cms: true,
+    mainpage: false
+  });
 });
 
 module.exports = router;
