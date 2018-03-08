@@ -1,1 +1,12 @@
 <h1>{{ message }}</h1>
+
+<ul>
+  {{#each videoData}}
+    <li>
+      <h4>{{ name }}</h4>
+      <p>${{ rating }}</p>
+      <p>{{ reviews }}</p>
+      <p>{{ type }}</p>
+    </li>
+  {{/each}}
+</ul>
