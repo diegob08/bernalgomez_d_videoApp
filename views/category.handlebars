@@ -3,10 +3,11 @@
 <ul>
   {{#each videoData}}
     <li>
-      <h4>{{ name }}</h4>
-      <p>${{ rating }}</p>
+      <h2>{{ name }}</h2>
+      <p>Rating: {{ rating }}</p>
+      <h4>Reviews:</h4>
       <p>{{ reviews }}</p>
-      <p>{{ type }}</p>
+      <p>Type: {{ type }}</p>
       <video src="/public/videos/{{ video_url }}" controls></video>
     </li>
   {{/each}}
