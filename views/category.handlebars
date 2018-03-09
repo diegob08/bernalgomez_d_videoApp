@@ -9,7 +9,7 @@
       <h4>Reviews:</h4>
       <p>{{ reviews }}</p>
       <p>Type: {{ type }}</p>
-      <video src="/public/videos/{{ video_url }}" controls></video>
+      <video src="/public/videos/{{ video_url }}" controls poster="/public/images/{{ thumbnail_url }}"></video>
     </li>
   {{/each}}
 </ul>
