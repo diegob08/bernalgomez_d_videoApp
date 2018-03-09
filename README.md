@@ -7,7 +7,7 @@ Video Application created for Authoring 3 Class. This app was developed using Ex
 Clone or Download Repo from https://github.com/diegob08/bernalgomez_d_videoApp
 
 Install node modules using the command line: npm install (make sure you have installed Node.js globally on your machine)
-Run node app in the command line to test on port 3000 using the command line: npm start
+Run node app in the command line to test on port 3000 using the command line: npm start.
 Select a category to choose your favorite movie or tv show!
 
 
