@@ -10,7 +10,7 @@ var toRender = (config.kidsmode) ? 'main_kids' : 'home';
 router.get('/', function(req, res, next) {
   res.render('home', {
     title: 'Dashboard',
-    message: "handlebars is awesome",
+    message: "Welcome to my video app",
     mainpage: true,
     cms: false,
     kidsmode: config.kidsmode
