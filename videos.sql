@@ -73,7 +73,7 @@ CREATE TABLE `video` (
 
 LOCK TABLES `video` WRITE;
 /*!40000 ALTER TABLE `video` DISABLE KEYS */;
-INSERT INTO `video` VALUES (1,'Breaking Bad','Adults','Breaking bad is an incredible show',5,'TV show','breakingbad_adults.mp4','breakingbad.jpg'),(2,'Logan','Adults','Name of video	Category	Rating	Rating	Type	video_url	thumbnail',4,'Movie','logan_adults.mp4','logan.jpg'),(3,'Dragon Ball ','Kids','Dragonball Franchise after all, It is a major household name in anime.',4,'TV show','dragonball_kids.mp4','dragonball.jpg'),(4,'Wreck it Ral','Kids','Wreck-It-Ralph enjoys a healthy ratio of accessible character drama and goofy gaming gags - resulting in an exceptionally entertaining, and heartfelt, animated adventure.',4,'Movie','ralph_kids.mp4','ralph.jpg');
+INSERT INTO `video` VALUES (1,'Breaking Bad','Adults','Breaking bad is an incredible show',5,'TV show','breakingbad_adults.mp4','breakindbad_thumbnail.jpg'),(2,'Logan','Adults','Name of video	Category	Rating	Rating	Type	video_url	thumbnail',4,'Movie','logan_adults.mp4','logan_thumbail.jpg'),(3,'Dragon Ball ','Kids','Dragonball Franchise after all, It is a major household name in anime.',4,'TV show','dragonball_kids.mp4','dbultra_thumbnail.jpg'),(4,'Wreck it Ral','Kids','Wreck-It-Ralph enjoys a healthy ratio of accessible character drama and goofy gaming gags - resulting in an exceptionally entertaining, and heartfelt, animated adventure.',4,'Movie','ralph_kids.mp4','wreckit_thumbnail.jpg');
 /*!40000 ALTER TABLE `video` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -86,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-07 23:26:04
+-- Dump completed on 2018-03-08 21:23:29
