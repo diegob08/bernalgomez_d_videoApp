@@ -40,7 +40,7 @@ exports.get_one_movie = (req, res) => {
       return console.log(err.message);
     }
 
-    let query = `SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.id}"`;
+    let query = `SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.id}" ORDER BY comments_date DESC`;
 
     connect.query(query, (err, rows) => {
       connection.release(); // let somebody else use this connection
