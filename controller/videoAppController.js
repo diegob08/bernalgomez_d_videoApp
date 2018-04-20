@@ -24,7 +24,9 @@ exports.get_all_movies = (req, res) => {
         defaultMovie: rows[Math.floor(Math.random() * rows.length)],
         movieCats: JSON.stringify(rows),
         mainpage: true,
-        videopage: false
+        videopage: false,
+        title: 'VideoApp Dashboard',
+        message: 'Welcome Diego Video App'
       });
     })
   })
