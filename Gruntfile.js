@@ -8,8 +8,9 @@ module.exports = function(grunt) {
       // },
       my_target: {
         files: {
-          'public/dist/main.min.js': ['public/javascripts/main.js'],
-          'public/dist/videopage.min.js': ['public/javascripts/videoVM.js']
+          'public/javascripts/dist/main.min.js': ['public/javascripts/main.js'],
+          'public/javascripts/dist/videopage.min.js': ['public/javascripts/videoVM.js'],
+          'public/javascripts/dist/formhandler.min.js': ['public/javascripts/formhandler.js']
         }
       }
     },
