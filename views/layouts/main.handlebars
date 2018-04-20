@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
   {{#if cms}}
     <link rel="stylesheet" href="/stylesheets/form.css">
   {{/if}}
   <title>{{ title }}</title>
 </head>
+
 <body>
   {{{ body }}}
 
+  <script>
+    var appData = {
+      movieCats : {{{ movieCats }}}
+    }
+  </script>
   {{#if mainpage}}
 
     <link rel="stylesheet" href="/stylesheets/main.css">
@@ -24,4 +31,5 @@
     <script src="javascripts/formhandler.js"></script>
   {{/if}}
 </body>
+
 </html>

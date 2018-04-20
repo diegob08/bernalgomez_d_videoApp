@@ -9,7 +9,7 @@ exports.get_all_movies = (req, res) => {
       return console.log(err.message);
     }
 
-    let query = `SELECT * FROM tbl_movies m, tbl_genre g, tbl_mov_genre mg WHERE m.movies_id = mg.movies_id AND g.genre_id = mg.genre_id`;
+    let query = `SELECT * FROM tbl_genre`;
 
     connect.query(query, (err, rows) => {
       connection.release(); // let somebody else use this connection
@@ -22,7 +22,7 @@ exports.get_all_movies = (req, res) => {
 
       res.render('home', {
         defaultMovie: rows[Math.floor(Math.random() * rows.length)],
-        data: JSON.stringify(rows),
+        movieCats: JSON.stringify(rows),
         mainpage: true,
         videopage: false
       });
