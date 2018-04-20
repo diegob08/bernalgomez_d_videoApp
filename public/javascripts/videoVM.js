@@ -26,7 +26,7 @@ Vue.component('review-stars', {
 var myVideoApp = {
 
   addReviews(data) {
-    // proces the review data and push it into the Vue instance
+
     data.forEach(review => myVideoApp.vm.reviews.push(review));
   },
   vm: new Vue({
@@ -42,7 +42,7 @@ var myVideoApp = {
       // do a post with all the new review stuff
       addReview() {
         // do a fetch here
-        let movieId = document.querySelector('.movId').textContent; // grab the movie id
+        let movieId = document.querySelector('.movId').textContent; 
         axios.post('/api', {
             id: movieId,
             stars: this.numStars,

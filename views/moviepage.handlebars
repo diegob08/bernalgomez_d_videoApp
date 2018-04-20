@@ -5,11 +5,11 @@
   </a>
   <main>
     <video autoplay>
-
+    <!-- remember to add all of the fallback sources here. -->
     <source src="/video/{{ moviesrc }}" type="video/mp4">
   </video>
   </main>
-  <!-- here trying to add own reviews -->
+  <!-- aside => add our own reviews -->
   <aside class="add-comment" :class="{ floatRight : reviews.length > 0 }">
     <form id="comments-form">
       <h4 class="review-heading">Add a Review</h4>
