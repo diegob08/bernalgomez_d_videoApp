@@ -65,25 +65,28 @@
 
 const myApp = {
   // some non-VM functionality would go here -> split the movies into genres using Vue
-  movieGenres(data) {
-    data.forEach((genre, index) => {
-      console.log(genre)
-      myApp.vm.genres.push({
-        name: genre.genre_name,
-        id: genre.genre_id
-      })
+  movieGenres(movies) {
+    let display_movies = {};
+    movies.forEach((movie, index) => {
+      if (!display_movies.hasOwnProperty(movie.genre_name)) {
+        display_movies[movie.genre_name] = []
+      }
+
+      display_movies[movie.genre_name].push(movie)
     })
+
+    myApp.vm.movies = display_movies;
   },
 
   vm: new Vue({
     el: "#app",
     data: {
       message: "Welcome to my Netflix ripoff!",
-      genres: [] // these get populated from the function at the top of the file
+      movies: [] // these get populated from the function at the top of the file
     },
     methods: {},
     delimiters: ["${", "}"]
   })
 }
 
-myApp.movieGenres(appData.movieCats);
+myApp.movieGenres(appData.movies);

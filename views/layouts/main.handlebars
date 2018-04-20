@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
   {{#if cms}}
-    <link rel="stylesheet" href="/stylesheets/form.css">
+    <link rel="stylesheet" href="/public/stylesheets/form.css">
   {{/if}}
   <title>{{ title }}</title>
 </head>
@@ -18,17 +18,16 @@
 
   <script>
     var appData = {
-      movieCats : {{{ movieCats }}}
+      movies : {{{movies}}},
     }
   </script>
   {{#if mainpage}}
-
-    <link rel="stylesheet" href="/stylesheets/main.css">
-    <script src="javascripts/main.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/main.css">
+    <script src="/public/javascripts/main.js"></script>
   {{/if}}
 
   {{#if cms}}
-    <script src="javascripts/formhandler.js"></script>
+    <script src="public/javascripts/formhandler.js"></script>
   {{/if}}
 </body>
 

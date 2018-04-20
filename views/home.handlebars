@@ -1,11 +1,16 @@
 <section id="app">
   <h1 class="title">{{ message }}</h1>
 
-  <section class="genre-lists" v-for="genre in genres">
-    <div class="genre-item">
-      <a class="link-button" :href="'/category/'+ genre.id" class="get-posts">
-        <h6 class="genre-name">${ genre.name }</h6>
-      </a>
+  <section class="genre-lists" v-for="(movie_list, movie_cat) in movies">
+    <div v-if="movie_list.length > 0">
+      <div class="genre-item">
+        <h6 class="genre-name">${ movie_cat }</h6>
+        <div class="movie-list" v-for="movie in movie_list">
+          <a :href="'/movies/' + movie.movies_id + '/' + movie.movies_trailer">
+            <img class="movie-thumb" :src="'images/' + movie.movies_cover" :alt="movie.movies_title">
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
