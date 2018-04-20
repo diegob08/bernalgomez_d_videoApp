@@ -1,19 +1,20 @@
 <section id="app">
   <h1 class="title">{{ message }}</h1>
 
-  <section class="genre-lists" v-for="(movie_list, movie_cat) in movies">
-    <div v-if="movie_list.length > 0">
-      <div class="genre-item">
+  <div class="flex-container">
+    <section class="genre-lists" v-for="(movie_list, movie_cat) in movies">
+      <div class="genre-item" v-if="movie_list.length > 0">
         <h6 class="genre-name">${ movie_cat }</h6>
-        <div class="movie-list" v-for="movie in movie_list">
-          <a :href="'/movies/' + movie.movies_id">
+        <div class="movie-list">
+          <div class="movie-item" v-for="movie in movie_list">
+            <a :href="'/movies/' + movie.movies_id">
             <img class="movie-thumb" :src="'images/' + movie.movies_cover" :alt="movie.movies_title">
           </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
+    </section>
+  </div>
   <button id="F56" class="deleteButton">delete row</button>
   <button id="F56" class="postButton">post data</button>
 
