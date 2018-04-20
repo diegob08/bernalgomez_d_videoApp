@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 
     watch: {
       sass: {
-        files: ['sass/*.scss'],
+        files: ['public/stylesheets/*.scss'],
         tasks: ['sass']
       }
     },
@@ -29,7 +29,10 @@ module.exports = function(grunt) {
         },
 
         files: {
-          'public/css/style.css': 'sass/master.scss'
+          'public/stylesheets/dist/style.css': 'public/stylesheets/master.scss',
+          'public/stylesheets/dist/kids.css': 'public/stylesheets/kids.scss',
+          'public/stylesheets/dist/form.css': 'public/stylesheets/form.scss',
+          'public/stylesheets/dist/category.css': 'public/stylesheets/category.scss',
         }
       }
     }
