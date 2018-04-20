@@ -8,6 +8,19 @@ body {
   font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+header {
+  .social-medias {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    max-width: 200px;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
 .title {
   margin: 0 auto;
   text-align: center;
@@ -91,6 +104,8 @@ li a {
 #video {
   position: relative;
   padding: 20px;
+  clear: both;
+  overflow: auto;
 
   .back-button {
     position: absolute;
