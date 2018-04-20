@@ -8,6 +8,7 @@ var toRender = (config.kidsmode) ? 'main_kids' : 'home';
 
 router.get('/', videoController.get_all_movies);
 router.get('/movies/:id', videoController.get_one_movie);
+router.post('/api', videoController.post_new_review);
 
 module.exports = router;
 
