@@ -6,7 +6,7 @@
       <div class="genre-item">
         <h6 class="genre-name">${ movie_cat }</h6>
         <div class="movie-list" v-for="movie in movie_list">
-          <a :href="'/movies/' + movie.movies_id + '/' + movie.movies_trailer">
+          <a :href="'/movies/' + movie.movies_id">
             <img class="movie-thumb" :src="'images/' + movie.movies_cover" :alt="movie.movies_title">
           </a>
         </div>

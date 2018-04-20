@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   {{#if cms}}
     <link rel="stylesheet" href="/public/stylesheets/form.css">
   {{/if}}
@@ -16,18 +17,27 @@
 <body>
   {{{ body }}}
 
+  {{#if mainpage}}
   <script>
     var appData = {
       movies : {{{movies}}},
     }
   </script>
-  {{#if mainpage}}
     <link rel="stylesheet" href="/public/stylesheets/main.css">
     <script src="/public/javascripts/main.js"></script>
   {{/if}}
 
   {{#if cms}}
-    <script src="public/javascripts/formhandler.js"></script>
+    <script src="/public/javascripts/formhandler.js"></script>
+  {{/if}}
+
+  {{#if videopage}}
+  <script>
+    var appData = {
+      comments : {{{comments}}},
+    }
+  </script>
+    <script src="/public/javascripts/videoVM.js"></script>
   {{/if}}
 </body>
 
