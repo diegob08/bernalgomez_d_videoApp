@@ -24,9 +24,9 @@ Vue.component('review-stars', {
 });
 
 var myVideoApp = {
-  // do more non-VM related stuff here
+
   addReviews(data) {
-    // process the review data and push it into the Vue instance
+    // proces the review data and push it into the Vue instance
     data.forEach(review => myVideoApp.vm.reviews.push(review));
   },
   vm: new Vue({
