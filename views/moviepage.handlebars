@@ -1,13 +1,37 @@
 <section id="video">
   <!-- back button here -->
-  <a href="/" class="back-button">
-    <i class="far fa-arrow-alt-circle-left"></i>
-  </a>
   <main>
-    <video autoplay>
-    <!-- remember to add all of the fallback sources here. -->
-    <source src="/public/videos/{{ movie.trailer }}" type="video/mp4">
-  </video>
+    <a href="/" class="back-button">
+      <i class="far fa-arrow-alt-circle-left"></i>
+    </a>
+
+    <div class="credit_summary_item">
+      <h4 class="inline">Name:</h4>
+      <span>{{movie.title}}</span>
+    </div>
+    <div class="credit_summary_item">
+      <h4 class="inline">Year:</h4>
+      <span>{{movie.year}}</span>
+    </div>
+    <div class="credit_summary_item">
+      <h4 class="inline">Runtime:</h4>
+      <span>{{movie.runtime}}</span>
+    </div>
+    <div class="credit_summary_item">
+      <h4 class="inline">Release:</h4>
+      <span>{{movie.release}}</span>
+    </div>
+    <div class="credit_summary_item">
+      <h4>Storyline:</h4>
+      <p>{{movie.storyline}}</p>
+    </div>
+    <div class="credit_summary_item">
+      <h4>Trailer:</h4>
+      <video autoplay poster="/public/images/{{movie.cover}}">
+        <source src="/public/videos/{{ movie.trailer }}" type="video/mp4">
+      </video>
+    </div>
+
   </main>
   <!-- aside => add our own reviews -->
   <aside class="add-comment" :class="{ floatRight : reviews.length > 0 }">
