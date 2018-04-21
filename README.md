@@ -8,6 +8,8 @@ Clone or Download Repo from https://github.com/diegob08/bernalgomez_d_videoApp
 
 Import the database file db_videos.sql
 
+Download videos and import them in the public/videos folder
+
 Make sure using port number for mac or windows, it depends on waht machine are you using to run the app
 
 Install node modules using the command line: npm install (make sure you have installed Node.js globally on your machine)
