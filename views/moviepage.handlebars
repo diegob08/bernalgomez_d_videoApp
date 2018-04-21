@@ -29,6 +29,42 @@
           ${ review.comments_copy }
         </p>
       </div>
+      <div class="social-buttons">
+      {{!-- Tweet --}}
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"  data-show-count="false">Tweet</a>
+
+      {{!-- Like and share --}}
+      {{!-- data-href parameter --}}
+      <div class="fb-like" data-href="/movies/{{movie}}/{{moviesrc}}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+  </div>
     </article>
   </aside>
+
+
+    <div id="app">
+  <social-sharing url="https://www.facebook.com/sharer/sharer.php?u=" title="Wow Check out this awesome movie I'm watching"
+                      description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
+                      quote="Wow Check out this awesome movie I'm watching"
+                      inline-template>
+  <div>
+    <ul>
+    <li>
+      <!-- <network network="facebook"> -->
+        <!-- <i class="fa fa-fw fab fa-facebook"></i> -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><i class="fa fa-fw fab fa-facebook"></i><p class="share-text">Share on Facebook</p></a>
+      <!-- </network> -->
+   </li>
+
+   <li>
+      <!-- <network network="twitter"> -->
+        <!-- <i class="fa fa-fw fab fa-twitter"></i> -->
+        <!-- <a href="https://twitter.com/home?status=" target="_blank" ><i class="fa fa-fw fab fa-twitter"></i> Twitter</a> -->
+        <a href="https://twitter.com/intent/tweet?text=Check%20This%20Out" target="_blank"><i class="twitter-share-button fa fa-fw fab fa-twitter"></i><p class="share-text">Share on Twitter</p></a>
+      <!-- </network> -->
+  </li>
+  </ul>
+   </div>
+  </social-sharing>
+
+  </div>
 </section>
