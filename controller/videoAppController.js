@@ -40,7 +40,7 @@ exports.get_one_movie = (req, res) => {
       return console.log(err.message);
     }
 
-    let query = `SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.id}" ORDER BY comments_date DESC`;
+    let query = `SELECT * FROM tbl_movies m LEFT JOIN tbl_comments c ON m.movies_id = c.comments_movie WHERE m.movies_id = "${req.params.id}" ORDER BY comments_date DESC`;
 
     connect.query(query, (err, rows) => {
       connection.release(); // let somebody else use this connection
@@ -50,10 +50,21 @@ exports.get_one_movie = (req, res) => {
       }
 
       console.log(rows);
+      if (rows.length > 0) {
+        movie = {
+          id: rows[0].movies_id,
+          cover: rows[0].movies_cover,
+          title: rows[0].movies_title,
+          year: rows[0].movies_year,
+          runtime: rows[0].movies_runtime,
+          storyline: rows[0].movies_storyline,
+          trailer: rows[0].movies_trailer,
+          release: rows[0].movies_release,
+        }
+      }
 
       res.render('moviepage', {
-        movie: req.params.id,
-        moviesrc: req.params.movie,
+        movie: movie,
         comments: JSON.stringify(rows),
         mainpage: false,
         videopage: true
